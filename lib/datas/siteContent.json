@@ -1,0 +1,14 @@
+{
+    "french": {
+        "description": {
+            "greeting":"Bonjour, je suis Nabil BEKKA",
+            "occupation":"Développeur Front-End React"
+        }
+    },
+    "english": {
+        "description": {
+            "greeting":"Hi, I'm Nabil BEKKA",
+            "occupation":"React Front-End Developer"
+        }
+    }
+}
