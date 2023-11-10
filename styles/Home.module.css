@@ -1,11 +1,26 @@
+.homePage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+
 .presentation {
 }
 
+.p {
+    font-size: 1.5rem;
+    color: var(--textHover);
+}
+
 .h1 {
-    font-size: 2rem;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .h2 {
     font-size: 1.5rem;
-    color: var(--textHover);
+    font-weight: 200;
 }

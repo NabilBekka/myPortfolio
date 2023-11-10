@@ -1,0 +1,41 @@
+.h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--background);
+}
+
+.email {
+    font-weight: 600;
+    color: var(--background);
+}
+
+.socialNetworksTitle {
+    font-weight: 600;
+    color: var(--background);
+}
+
+.socialNetworks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--background);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 870px) {
+    .h3 {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 550px) {
+    .h3 {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 390px) {
+    .h3 {
+        font-size: 0.8rem;
+    }
+}

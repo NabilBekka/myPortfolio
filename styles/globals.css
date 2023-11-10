@@ -20,7 +20,6 @@ body {
     padding: 0;
     margin: 0;
     font-size: 16px;
-    min-height: 1000px;
 }
 
 main {
@@ -28,9 +27,24 @@ main {
     top: var(--headerHight);
 }
 
+footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--textHover);
+}
+
+footer p {
+    color: var(--background);
+}
+
 @media (max-width: 870px) {
     :root {
         --headerHight: 80px
+    }
+
+    footer * {
+        font-size: 0.8rem;
     }
 }
 
@@ -38,10 +52,18 @@ main {
     :root {
         --headerHight: 70px
     }
+
+    footer * {
+        font-size: 0.65rem;
+    }
 }
 
 @media (max-width: 390px) {
     :root {
         --headerHight: 60px
+    }
+
+    footer * {
+        font-size: 0.55rem;
     }
 }
