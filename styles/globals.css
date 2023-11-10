@@ -38,6 +38,27 @@ footer p {
     color: var(--background);
 }
 
+.errorPage {
+    position: relative;
+    top: var(--headerHight);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.errorPage img {
+    height: 300px;
+    width: 280px;
+}
+
+.errorPage h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--textHover);
+}
+
 @media (max-width: 870px) {
     :root {
         --headerHight: 80px
@@ -45,6 +66,15 @@ footer p {
 
     footer * {
         font-size: 0.8rem;
+    }
+
+    .errorPage img {
+        height: 240px;
+        width: 200px;
+    }
+    
+    .errorPage h1 {
+        font-size: 2rem;
     }
 }
 
@@ -56,6 +86,15 @@ footer p {
     footer * {
         font-size: 0.65rem;
     }
+
+    .errorPage img {
+        height: 200px;
+        width: 170px;
+    }
+    
+    .errorPage h1 {
+        font-size: 1.7rem;
+    }
 }
 
 @media (max-width: 390px) {
@@ -65,5 +104,14 @@ footer p {
 
     footer * {
         font-size: 0.55rem;
+    }
+
+    .errorPage img {
+        height: 160px;
+        width: 140px;
+    }
+    
+    .errorPage h1 {
+        font-size: 1.2rem;
     }
 }
