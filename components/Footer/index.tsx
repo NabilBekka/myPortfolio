@@ -9,7 +9,7 @@ const Footer: FunctionComponent = () => {
         <footer>
             <h3 className={styles.h3}>{language==='fr' ? 'Me contacter' : 'Contact'}</h3>
             <p><span className={styles.email}>Email:</span> nabilbekka@outlook.fr</p>
-            <p className={styles.socialNetworksTitle}>{language==='fr' ? 'RÉSEAUX SOCIAUX:' : 'SOCIAL NETWORKS:'}</p>
+            {/* <p className={styles.socialNetworksTitle}>{language==='fr' ? 'RÉSEAUX SOCIAUX:' : 'SOCIAL NETWORKS:'}</p> */}
             <div className={styles.socialNetworks}>
                 <a href="https://github.com/NabilBekka" target="_blanc"><Image 
                     src="/images/github.svg"

@@ -64,6 +64,10 @@ footer p {
         --headerHight: 80px
     }
 
+    main {
+        top: 0;
+    }
+
     footer * {
         font-size: 0.8rem;
     }

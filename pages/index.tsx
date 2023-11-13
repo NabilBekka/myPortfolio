@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import { useContext } from 'react';
 import { LanguageContext } from '@/lib/contexts/languageContext';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 type Props = {
   frContent: {
@@ -24,6 +25,12 @@ type Props = {
 export default function Home({frContent, enContent}: Props) {
   const {language} = useContext(LanguageContext);
   const content = language === "fr" ? frContent : enContent;
+  const router = useRouter();
+
+  const moreInfo = ():void => {
+    router.push('/aboutPage');
+  }
+
   return (
     <>
       <Head>
@@ -38,12 +45,18 @@ export default function Home({frContent, enContent}: Props) {
             <p className={styles.p}>{content.description.greeting}</p>
             <h1 className={styles.h1}>Nabil Bekka</h1>
             <h2 className={styles.h2}>{content.description.occupation}</h2>
+            <button 
+              onClick={moreInfo}
+              className={styles.button}>
+                {language === 'fr' ? "Plus d'infos" : "More info"}
+            </button>
           </div>
           <Image 
             src="/images/NB.png"
             height={440}
             width={383}
             alt={language==='fr' ? 'Photo de profil' : 'Profil picture'}
+            className={styles.img}
           />
         </div>
       </main>

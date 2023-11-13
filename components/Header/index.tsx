@@ -31,9 +31,9 @@ const Header: FunctionComponent<Props> = () => {
             <div className={styles.navDiv}>
                 <nav className={styles.nav}>
                     <Link className={styles.link} href='/'>{language === "fr" ? "Accueil" : "Home"}</Link>
-                    <Link className={styles.link} href='/about'>{language === "fr" ? "À propos" : "About"}</Link>
-                    <Link className={styles.link} href='/myProjects'>{language === "fr" ? "Mes projets" : "My projects"}</Link>
-                    <Link className={styles.link} href='/contactMe'>{language === "fr" ? "Me contacter" : "Contact"}</Link>
+                    <Link className={styles.link} href='/aboutPage'>{language === "fr" ? "À propos" : "About"}</Link>
+                    <Link className={styles.link} href='/projectsPage'>{language === "fr" ? "Mes projets" : "My projects"}</Link>
+                    <Link className={styles.link} href='/contactPage'>{language === "fr" ? "Me contacter" : "Contact"}</Link>
                 </nav>
                 <select value={language} className={styles.select} onChange={e => chooseLanguage(e)}>
                     <option value="fr">FR</option>
