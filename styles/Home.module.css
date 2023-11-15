@@ -39,6 +39,13 @@
     color: var(--textHover);
 }
 
+.technologies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (max-width: 870px){
     .homePage {
         padding-top: 100px;

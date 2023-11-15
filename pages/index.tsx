@@ -4,6 +4,8 @@ import { useContext } from 'react';
 import { LanguageContext } from '@/lib/contexts/languageContext';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import type { Technology } from '@/components/Technologies';
+import Technologies from '@/components/Technologies';
 
 type Props = {
   frContent: {
@@ -20,9 +22,10 @@ type Props = {
       occupation: string;
     }
   };
+  technologies: Technology[]
 }
 
-export default function Home({frContent, enContent}: Props) {
+export default function Home({frContent, enContent, technologies}: Props) {
   const {language} = useContext(LanguageContext);
   const content = language === "fr" ? frContent : enContent;
   const router = useRouter();
@@ -40,7 +43,7 @@ export default function Home({frContent, enContent}: Props) {
         <link rel="icon" href="/images/NB.png" />
       </Head>
       <main>
-        <div className={styles.homePage}>
+        <section className={styles.homePage}>
           <div className={styles.presentation}>
             <p className={styles.p}>{content.description.greeting}</p>
             <h1 className={styles.h1}>Nabil Bekka</h1>
@@ -58,7 +61,13 @@ export default function Home({frContent, enContent}: Props) {
             alt={language==='fr' ? 'Photo de profil' : 'Profil picture'}
             className={styles.img}
           />
-        </div>
+        </section>
+        <aside>
+          <div className={styles.technologies}>
+            <h2 className={styles.h2}>Technologies</h2>
+            <Technologies technologies={technologies}/>
+          </div>
+        </aside>
       </main>
     </>
   )
@@ -68,10 +77,14 @@ export const getStaticProps = async () => {
   const content = await import('@/lib/datas/siteContent.json');
   const frContent = content.french;
   const enContent = content.english;
+
+  const datas = await import("@/lib/datas/datas.json");
+  const technologies: Technology[] = datas.technologies;
   return {
     props: {
       frContent,
-      enContent
+      enContent,
+      technologies
     }
   }
 }
