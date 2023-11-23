@@ -48,11 +48,29 @@ export default function Home({frContent, enContent, technologies}: Props) {
             <p className={styles.p}>{content.description.greeting}</p>
             <h1 className={styles.h1}>Nabil Bekka</h1>
             <h2 className={styles.h2}>{content.description.occupation}</h2>
-            <button 
-              onClick={moreInfo}
-              className={styles.button}>
-                {language === 'fr' ? "Plus d'infos" : "More info"}
-            </button>
+            <div className={styles.contact}>
+              <button 
+                onClick={moreInfo}
+                className={styles.button}>
+                  {language === 'fr' ? "Me contacter" : "Contact me"}
+              </button>
+              <div>
+                <a href="https://github.com/NabilBekka" target="_blanc"><Image 
+                    src="/images/github.svg"
+                    width={50}
+                    height={50}
+                    alt="Github logo"
+                    className={styles.social}
+                /></a>
+                <a href="https://www.linkedin.com/in/nabilbekka/" target="_blanc"><Image 
+                    src="/images/linkedin.svg"
+                    width={50}
+                    height={50}
+                    alt="Github logo"
+                    className={styles.social}
+                /></a>
+              </div>
+            </div>
           </div>
           <Image 
             src="/images/NB.png"

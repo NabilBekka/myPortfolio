@@ -25,8 +25,13 @@ const LanguageContextProvider: FunctionComponent<Props> = ({children}) => {
         /* We save the language in localStorage */
         localStorage.setItem("language", value);
     }
+
+    const contextValue = {
+        language,
+        toggleLanguage
+    }
     return (
-        <LanguageContext.Provider value={{language, toggleLanguage}}>
+        <LanguageContext.Provider value={contextValue}>
             {children}
         </LanguageContext.Provider>
     )

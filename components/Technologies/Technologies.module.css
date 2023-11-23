@@ -7,3 +7,12 @@
     gap: 5px;
     margin-bottom: 50px;
 }
+
+.div {
+    width: 50px;
+}
+
+.swipe:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

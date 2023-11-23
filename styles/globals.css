@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --background: #091B29;
-    --textHover: #38A2E4;
+    --background: #fff;
+    --textHover: #0167DE;
     --headerHight: 50px;
 }
 *{
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
     font-size: 1rem;
-    color: #fff;
+    color: #183B56;
     margin: 0;
     padding: 0;
     transition: .3s;
@@ -31,11 +31,11 @@ footer {
     width: 100%;
     padding: 20px;
     text-align: center;
-    background-color: var(--textHover);
+    border-top: solid 2px var(--textHover);
 }
 
 footer p {
-    color: var(--background);
+    color: var(--textHover);
 }
 
 .errorPage {

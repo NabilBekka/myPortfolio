@@ -8,7 +8,6 @@
 
 .p {
     font-size: 1.5rem;
-    color: var(--textHover);
 }
 
 .h1 {
@@ -25,12 +24,11 @@
 .button {
     background-color: var(--textHover);
     border: solid 2px var(--textHover);
-    border-radius: 8px;
-    width: 120px;
-    height: 40px;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
     color: var(--background);
-    margin-top: 20px;
-    transition: .7s;
+    transition: .3s;
 }
 
 .button:hover {
@@ -44,6 +42,18 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+.contact {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 870px){
@@ -94,6 +104,22 @@
     .h2 {
         font-size: 1.1rem;
     }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .button {
+        height: 40px;
+        width: 70%;
+        font-size: 0.8rem;
+    }
+
+    .social {
+        margin-top: 10px;
+        height: 40px;
+        width: 40px;
+    }
 }
 
 @media (max-width: 450px){
@@ -131,5 +157,16 @@
 
     .h2 {
         font-size: 0.8rem;
+    }
+
+    .button {
+        height: 30px;
+        font-size: 0.6rem;
+    }
+
+    .social {
+        margin-top: 7px;
+        height: 30px;
+        width: 30px;
     }
 }
