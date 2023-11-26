@@ -1,0 +1,33 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 275px;
+    height: 400px;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 20px;
+}
+
+.project:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.h3 {
+    text-transform: uppercase;
+    font-family: 1.2rem;
+}
+
+.p {
+    font-size: .8rem;
+    text-align: center;
+}
+
+@media (max-width: 970px) {
+    .display {
+        display: none;
+    }
+}

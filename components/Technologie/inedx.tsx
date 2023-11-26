@@ -1,12 +1,9 @@
 import Image from "next/image";
 import styles from "./Tachnologie.module.css";
 import { FunctionComponent } from "react";
+import type { Technology } from "../Technologies";
 
-type Props = {
-    name: string;
-    urlLogo: string;
-}
-const Technologie: FunctionComponent<Props> = ({name, urlLogo}) => {
+const Technologie: FunctionComponent<Technology> = ({name, urlLogo}) => {
   return (
     <div className={styles.technologie}>
         <Image 
