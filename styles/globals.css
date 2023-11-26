@@ -2,14 +2,16 @@
 
 :root {
     --background: #fff;
+    --text: #183B56;
     --textHover: #0167DE;
+    --box: #F2F2F2;
     --headerHight: 50px;
 }
 *{
     box-sizing: border-box;
     font-family: 'PT Serif', serif;
     font-size: 1rem;
-    color: #183B56;
+    color: var(--text);
     margin: 0;
     padding: 0;
     transition: .3s;

@@ -82,7 +82,6 @@ export default function Home({frContent, enContent, technologies}: Props) {
         </section>
         <aside>
           <div className={styles.technologies}>
-            <h2 className={styles.h2}>Technologies</h2>
             <Technologies technologies={technologies}/>
           </div>
         </aside>

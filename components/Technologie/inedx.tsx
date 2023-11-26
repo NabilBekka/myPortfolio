@@ -12,8 +12,8 @@ const Technologie: FunctionComponent<Props> = ({name, urlLogo}) => {
         <Image 
             src={urlLogo}
             alt={`${name} logo`}
-            width={50}
-            height={50}
+            width={20}
+            height={20}
             className={styles.img}
         />
         <h2 className={styles.title}>{name}</h2>

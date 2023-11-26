@@ -16,11 +16,6 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.h2 {
-    font-size: 1.5rem;
-    font-weight: 200;
-}
-
 .button {
     background-color: var(--textHover);
     border: solid 2px var(--textHover);
@@ -81,10 +76,6 @@
     .h1 {
         font-size: 3.5rem;
     }
-
-    .h2 {
-        font-size: 1.3rem;
-    }
 }
 
 @media (max-width: 550px){
@@ -99,10 +90,6 @@
 
     .h1 {
         font-size: 3rem;
-    }
-
-    .h2 {
-        font-size: 1.1rem;
     }
 
     .contact {
@@ -135,10 +122,6 @@
     .h1 {
         font-size: 2.65rem;
     }
-
-    .h2 {
-        font-size: 1rem;
-    }
 }
 
 @media (max-width: 372px){
@@ -153,10 +136,6 @@
 
     .h1 {
         font-size: 2.2rem;
-    }
-
-    .h2 {
-        font-size: 0.8rem;
     }
 
     .button {
