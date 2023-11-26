@@ -31,3 +31,45 @@
         display: none;
     }
 }
+
+@media (max-width: 460px) {
+    .project {
+        width: 240px;
+        height: 360px;
+        margin: 5px 15px;
+    }
+
+    .img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .h3 {
+        font-size: 1rem;
+    }
+
+    .p {
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .project {
+        width: 200px;
+        height: 300px;
+        margin: 5px 10px;
+    }
+
+    .img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .h3 {
+        font-size: .8rem;
+    }
+
+    .p {
+        font-size: .5rem;
+    }
+}

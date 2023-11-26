@@ -50,3 +50,35 @@
         display: block;
     }
 }
+
+@media (max-width: 460px){
+    .scrollLeft {
+        width: 40px;
+        margin-top: 130px;
+    }
+    
+    .scrollRight {
+        width: 40px;
+        margin-top: 130px;
+    }
+
+    .whiteDiv {
+        width: 40px;
+    }
+}
+
+@media (max-width: 350px){
+    .scrollLeft {
+        width: 30px;
+        margin-top: 110px;
+    }
+    
+    .scrollRight {
+        width: 30px;
+        margin-top: 110px;
+    }
+
+    .whiteDiv {
+        width: 30px;
+    }
+}
