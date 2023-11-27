@@ -33,8 +33,8 @@ export default function Home({frContent, enContent, technologies, projects}: Pro
   const content = language === "fr" ? frContent : enContent;
   const router = useRouter();
 
-  const moreInfo = ():void => {
-    router.push('/aboutPage');
+  const contactMe = ():void => {
+    router.push('/contactPage');
   }
 
   return (
@@ -53,7 +53,7 @@ export default function Home({frContent, enContent, technologies, projects}: Pro
             <h2 className={styles.h2}>{content.description.occupation}</h2>
             <div className={styles.contact}>
               <button 
-                onClick={moreInfo}
+                onClick={contactMe}
                 className={styles.button}>
                   {language === 'fr' ? "Me contacter" : "Contact me"}
               </button>
