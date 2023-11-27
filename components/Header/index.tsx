@@ -1,6 +1,5 @@
-import Link from "next/link";
 import styles from "./Header.module.css";
-import { ChangeEvent, FunctionComponent, PropsWithChildren, useContext, useState } from "react";
+import { ChangeEvent, FunctionComponent, PropsWithChildren, SyntheticEvent, useContext, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { LanguageContext } from "@/lib/contexts/languageContext";
@@ -51,8 +50,10 @@ const Header: FunctionComponent<Props> = () => {
                 className={styles.navLogo}
                 onClick={toggleDisplayNav}
             />
-            {displayNavSmallScreen && <div className={styles.navSmallScreen}>
-                <Navigation toggleDisplayNav={toggleDisplayNav}/>
+            {displayNavSmallScreen && <div className={styles.navSmallScreenContainer} onClick={toggleDisplayNav}>
+                <div onClick={(e:SyntheticEvent<HTMLDivElement>) => {e.stopPropagation()}} className={styles.navSmallScreen}>
+                    <Navigation toggleDisplayNav={toggleDisplayNav}/>
+                </div>
             </div>}
         </header>
     )

@@ -68,6 +68,15 @@
     cursor: pointer;
 }
 
+.navSmallScreenContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .3)
+}
+
 .navSmallScreen {
     position: absolute;
     top: 2px;
@@ -77,6 +86,7 @@
     border-radius: 10px;
     padding: 7px 10px 10px 50px;
     z-index: 100;
+    opacity: 1;
 }
 
 @media (max-width: 870px) {
