@@ -1,0 +1,239 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+}
+.div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 100px;
+    box-shadow: 5px 5px 10px grey;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+.h2 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.p {
+    overflow: hidden;
+    text-align: center;
+    margin: 0 10% 20px 10%;
+    min-height: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 950px;
+    margin: 10px 0;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+}
+
+.input {
+    height: 65px;
+    width: 100%;
+    padding: 20px;
+    border: solid 1px var(--text);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.textarea {
+    width: 70%;
+    height: 140px;
+    padding: 20px;
+    border: solid 1px var(--text);
+    border-radius: 5px;
+}
+
+.input:focus, .textarea:focus {
+    border: solid 1px var(--textHover);
+}
+
+.button {
+    height: 65px;
+    width: 250px;
+    padding: 20px;
+    color: #fff;
+    background-color: var(--textHover);
+    border: 1px solid var(--textHover);
+    border-radius: 5px;
+}
+
+.button:hover, .button:focus {
+    background-color: #fff;
+    color: var(--textHover);
+    cursor: pointer;
+}
+
+@media (max-width: 870px) {
+    .div {
+        height: 550px;
+    }
+    .h2 {
+        font-size: 2.5rem;
+    }
+    .p {
+        font-size: .9rem;
+    }
+    .p a{
+        font-size: .9rem;
+    }
+    .form {
+        width: 800px;
+    }
+    .input, .textarea {
+        font-size: .9rem;
+        padding: 17px;
+    }
+    .button {
+        font-size: .9rem;
+        padding: 17px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 700px) {
+    .div {
+        height: 500px;
+    }
+    .h2 {
+        font-size: 2.2rem;
+    }
+    .p {
+        font-size: .85rem;
+    }
+    .p a{
+        font-size: .85rem;
+    }
+    .form {
+        width: 700px;
+    }
+    .input, .textarea {
+        font-size: .85rem;
+        padding: 15px;
+    }
+    .button {
+        font-size: .85rem;
+        padding: 15px;
+        width: 175px;
+    }
+}
+
+@media (max-width: 600px) {
+    .h2 {
+        font-size: 2rem;
+    }
+    .p {
+        font-size: .75rem;
+        margin-bottom: 10px;
+    }
+    .p a{
+        font-size: .75rem;
+    }
+    .form {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .input {
+        font-size: .75rem;
+        padding: 13px;
+        height: 50px;
+    }
+    .textarea {
+        font-size: .75rem;
+        padding: 13px;
+    }
+    .button {
+        font-size: .75rem;
+        padding: 13px;
+        width: 150px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 550px) {
+    .inputs {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    .h2 {
+        font-size: 1.7rem;
+    }
+    .p {
+        font-size: .7rem;
+    }
+    .p a{
+        font-size: .7rem;
+    }
+    .form {
+        margin: 4px 0;
+    }
+    .input {
+        font-size: .7rem;
+        padding: 10px;
+        height: 45px;
+    }
+    .textarea {
+        font-size: .7rem;
+        padding: 10px;
+    }
+    .button {
+        font-size: .7rem;
+        padding: 10px;
+        width: 120px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 400px) {
+    .div {
+        padding-bottom: 0;
+    }
+    .h2 {
+        font-size: 1.4rem;
+    }
+    .p {
+        font-size: .6rem;
+    }
+    .p a{
+        font-size: .6rem;
+    }
+    .form {
+        margin: 4px 0;
+    }
+    .input {
+        font-size: .6rem;
+        padding: 8px;
+        height: 40px;
+    }
+    .textarea {
+        font-size: .6rem;
+        padding: 8px;
+    }
+    .button {
+        font-size: .6rem;
+        padding: 8px;
+        width: 90px;
+        height: 40px;
+    }
+}

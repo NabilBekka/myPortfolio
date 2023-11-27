@@ -101,10 +101,6 @@
         right: 10px;
         font-size: 0.9rem;
     }
-
-    .link {
-        font-size: 0.9rem;
-    }
 }
 
 @media (max-width: 550px) {
@@ -115,10 +111,6 @@
 
     .select {
         top: 15px;
-        font-size: 0.8rem;
-    }
-
-    .link {
         font-size: 0.8rem;
     }
 
@@ -133,11 +125,7 @@
     .nav {
         flex-direction: column;
         align-items: start;
-    }
-}
-@media (max-width: 450px) {
-    .link {
-        font-size: 10px;
+        margin-bottom: 5px;
     }
 }
 
@@ -152,14 +140,10 @@
         width: 25px;
         top: 8px;
     }
-
-    .link {
-        font-size: 8px;
-    }
 }
 
 @media (max-width: 325px) {
     .link {
-        font-size: 6px;
+        font-size: .8rem;
     }
 }
