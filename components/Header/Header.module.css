@@ -56,6 +56,29 @@
     outline: none;
 }
 
+.navLogo {
+    display: none;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    z-index: 200;
+}
+
+.navLogo:hover {
+    cursor: pointer;
+}
+
+.navSmallScreen {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: var(--background);
+    border: 1px solid var(--text);
+    border-radius: 10px;
+    padding: 7px 10px 10px 50px;
+    z-index: 100;
+}
+
 @media (max-width: 870px) {
     .header {
         flex-direction: column;
@@ -73,6 +96,7 @@
         font-size: 0.9rem;
     }
 }
+
 @media (max-width: 550px) {
     .logo {
         height: 30px;
@@ -80,30 +104,43 @@
     }
 
     .select {
+        top: 15px;
         font-size: 0.8rem;
     }
 
     .link {
         font-size: 0.8rem;
     }
-}
-@media (max-width: 450px) {
-    .logo {
-        height: 25px;
-        width: 30px;
-    }
-    .select {
-        font-size: 10px;
+
+    .navBigScreen {
+        display: none;
     }
 
+    .navLogo {
+        display: block;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media (max-width: 450px) {
     .link {
         font-size: 10px;
     }
 }
 
 @media (max-width: 372px) {
-    .select {
-        font-size: 8px;
+    .logo {
+        height: 25px;
+        width: 30px;
+    }
+
+    .navLogo {
+        height: 25px;
+        width: 25px;
+        top: 8px;
     }
 
     .link {
@@ -112,10 +149,6 @@
 }
 
 @media (max-width: 325px) {
-    .select {
-        font-size: 6px;
-    }
-
     .link {
         font-size: 6px;
     }

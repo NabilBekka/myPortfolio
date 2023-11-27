@@ -2,6 +2,7 @@ import { LanguageContext } from "@/lib/contexts/languageContext";
 import { FunctionComponent, useContext, useState } from "react";
 import Project from "../Project";
 import styles from "./Projects.module.css";
+import stylesTechnologies from "../Technologies/Technologies.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -38,7 +39,7 @@ type Props = {
 
     return (
         <div className={styles.container}>
-            <h2 className={styles.h2}>{language === "fr" ? "Mes projets" : "My projects"}</h2>
+            <h2 className={stylesTechnologies.h2}>{language === "fr" ? "Mes projets" : "My projects"}</h2>
             <div className={styles.projects}>
                 {(projectDisplay !== 1) ? <Image 
                     src="./images/swipeLeft.svg"

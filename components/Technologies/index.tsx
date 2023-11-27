@@ -1,6 +1,7 @@
 import { FunctionComponent, useState } from "react";
 import Technologie from "../Technologie/inedx";
 import styles from "./Technologies.module.css";
+import stylesPorjects from "../Projects/Projects.module.css";
 
 export type Technology = {
     name: string;
@@ -13,7 +14,7 @@ type Props = {
 
 const Technologies: FunctionComponent<Props> = ({technologies}) => {
   return (
-    <div>
+    <div className={stylesPorjects.container}>
       <h2 className={styles.h2}>Technologies</h2>
       <div className={styles.technologies}>
         {technologies.map((tech: Technology) => <Technologie name={tech.name} urlLogo={tech.urlLogo} key={tech.name}/> )}

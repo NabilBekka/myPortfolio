@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     transition: .3s;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -86,7 +87,7 @@ footer p {
 
 @media (max-width: 550px) {
     :root {
-        --headerHight: 70px
+        --headerHight: 50px
     }
 
     footer * {
@@ -104,10 +105,6 @@ footer p {
 }
 
 @media (max-width: 390px) {
-    :root {
-        --headerHight: 60px
-    }
-
     footer * {
         font-size: 0.55rem;
     }

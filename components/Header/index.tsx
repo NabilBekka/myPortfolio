@@ -1,15 +1,17 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
-import { ChangeEvent, FunctionComponent, PropsWithChildren, useContext } from "react";
+import { ChangeEvent, FunctionComponent, PropsWithChildren, useContext, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { LanguageContext } from "@/lib/contexts/languageContext";
+import Navigation from "../Navigation";
 
 type Props = PropsWithChildren<{}>
 
 const Header: FunctionComponent<Props> = () => {
     const router = useRouter();
     const {language, toggleLanguage} = useContext(LanguageContext);
+    const [displayNavSmallScreen, setDisplayNavSmallScreen] = useState(false);
 
     const backToHomePage = (): void => {
         router.push('/');
@@ -17,6 +19,10 @@ const Header: FunctionComponent<Props> = () => {
 
     const chooseLanguage = (e:ChangeEvent<HTMLSelectElement>):void => {
         toggleLanguage(e.currentTarget.value);
+    }
+
+    const toggleDisplayNav = (): void => {
+        setDisplayNavSmallScreen(!displayNavSmallScreen);
     }
     return (
         <header className={styles.header}>
@@ -29,17 +35,25 @@ const Header: FunctionComponent<Props> = () => {
                 onClick={backToHomePage}
             />
             <div className={styles.navDiv}>
-                <nav className={styles.nav}>
-                    <Link className={styles.link} href='/'>{language === "fr" ? "Accueil" : "Home"}</Link>
-                    <Link className={styles.link} href='/aboutPage'>{language === "fr" ? "À propos" : "About"}</Link>
-                    <Link className={styles.link} href='/projectsPage'>{language === "fr" ? "Mes projets" : "My projects"}</Link>
-                    <Link className={styles.link} href='/contactPage'>{language === "fr" ? "Me contacter" : "Contact"}</Link>
-                </nav>
+                <div className={styles.navBigScreen}>
+                    <Navigation />
+                </div>
                 <select value={language} className={styles.select} onChange={e => chooseLanguage(e)}>
                     <option value="fr">FR</option>
                     <option value="en">EN</option>
                 </select>
             </div>
+            <Image 
+                src="./images/navigation.svg"
+                alt="Navigation Logo"
+                height={30}
+                width={30}
+                className={styles.navLogo}
+                onClick={toggleDisplayNav}
+            />
+            {displayNavSmallScreen && <div className={styles.navSmallScreen}>
+                <Navigation toggleDisplayNav={toggleDisplayNav}/>
+            </div>}
         </header>
     )
 }
