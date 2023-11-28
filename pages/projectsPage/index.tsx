@@ -25,12 +25,11 @@ export default function ProjectsPage ({projects}: Props) {
     </>}
 
 export const getStaticProps = async () => {
-  
     const datas = await import("@/lib/datas/datas.json");
     const projects: ProjectType[] = datas.myProjects;
     return {
-      props: {
+        props: {
         projects
-      }
+        }
     }
-  }
+}

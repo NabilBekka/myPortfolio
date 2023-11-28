@@ -3,6 +3,7 @@ import type { ProjectType } from "../Projects";
 import Image from "next/image";
 import { LanguageContext } from "@/lib/contexts/languageContext";
 import styles from "./Project.module.css";
+import { useRouter } from "next/router";
 
 type Props = {
     project: ProjectType;
@@ -11,13 +12,18 @@ type Props = {
 }
 
 const Project: FunctionComponent<Props> = ({project, projectDisplay = 0, number = 0}) => {
-    const {name, abstract, imgUrl} = project;
+    const {id, name, abstract, imgUrl} = project;
     const {language} = useContext(LanguageContext);
+    const router = useRouter();
 
-    const condition = projectDisplay === 0 ? false : (projectDisplay!==number )
+    const condition = projectDisplay === 0 ? false : (projectDisplay!==number );
+
+    const redirect = (): void => {
+      router.push(`/projectsPage/${id}`);
+    }
 
     return (
-      <div className={`${styles.project} ${condition && styles.display}`}>
+      <div className={`${styles.project} ${condition && styles.display}`} onClick={redirect}>
           <h3 className={styles.h3}>{name}</h3>
           <Image 
             src={imgUrl}

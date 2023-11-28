@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export type ProjectType = {
-    id: number;
+    id: string;
     name: string;
     decription: {
         fr: string;
