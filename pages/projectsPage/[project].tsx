@@ -1,16 +1,43 @@
 import type { ProjectType } from "@/components/Projects";
+import { LanguageContext } from "@/lib/contexts/languageContext";
 import { GetStaticPropsContext } from "next";
+import Image from "next/image";
+import { useContext } from "react";
+import styles from "@/styles/ProjectPage.module.css";
 
 type Props = {
     project: ProjectType;
 }
 
 export default function ProjectDetails({project}:Props) {
-  return (
-    <main>
-      {JSON.stringify(project)}
-    </main>
-  )
+    const {language} = useContext(LanguageContext);
+    const {name, desription, imgUrl, url, urlGithub, technologies} = project;
+    return (
+        <main className={styles.project}>
+            <h2>{name}</h2>
+            <div className={styles.imgs}>
+                {imgUrl.map((url: string, index) => <Image 
+                    key={index}
+                    src={url}
+                    alt={`${name} image ${index}`}
+                    width={300}
+                    height={300}
+                />)}
+            </div>
+            <div className={styles.descriptionDiv}>
+                <h3>Description</h3>
+                <p>{language === "fr" ? desription.fr : desription.en}</p>
+            </div>
+            <div className={styles.technologiesDiv}>
+                <h3>Technologies</h3>
+                <p>{technologies}</p>
+            </div>
+            <div className={styles.viewContent}>
+                {url && <a href={url} target="_blanc">WEBSITE</a>}
+                <a href={urlGithub} target="_blanc">{language === "fr" ? "CODE SOURCE" : "SOURCE CODE"}</a>
+            </div>
+        </main>
+    )
 }
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {

@@ -9,7 +9,7 @@ import Image from "next/image";
 export type ProjectType = {
     id: string;
     name: string;
-    decription: {
+    desription: {
         fr: string;
         en: string;
     };
@@ -17,8 +17,9 @@ export type ProjectType = {
         fr: string;
         en: string;
     };
-    imgUrl: string;
-    url: string;
+    imgUrl: string[];
+    url?: string;
+    urlGithub: string;
     technologies: string;
 }
 

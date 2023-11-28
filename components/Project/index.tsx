@@ -26,7 +26,7 @@ const Project: FunctionComponent<Props> = ({project, projectDisplay = 0, number 
       <div className={`${styles.project} ${condition && styles.display}`} onClick={redirect}>
           <h3 className={styles.h3}>{name}</h3>
           <Image 
-            src={imgUrl}
+            src={imgUrl[0]}
             alt= {name}
             width={180}
             height={180}
