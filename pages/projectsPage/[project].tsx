@@ -4,7 +4,10 @@ import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import { useContext } from "react";
 import styles from "@/styles/ProjectPage.module.css";
-import { useRouter } from "next/router";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { settings } from "@/lib/slider";
 
 type Props = {
     project: ProjectType;
@@ -12,20 +15,22 @@ type Props = {
 
 export default function ProjectDetails({project}:Props) {
     const {language} = useContext(LanguageContext);
+    
     if (project){
         const {name, desription, imgUrl, url, urlGithub, technologies} = project;
         return (
             <main className={styles.project}>
                 <h2>{name}</h2>
-                <div className={styles.imgs}>
+                <Slider {...settings}>
                     {imgUrl.map((url: string, index) => <Image 
                         key={index}
                         src={url}
                         alt={`Image ${index}`}
                         width={300}
                         height={300}
+                        className={styles.imgProject}
                     />)}
-                </div>
+                </Slider>
                 <div className={styles.descriptionDiv}>
                     <h3>Description</h3>
                     <p>{language === "fr" ? desription.fr : desription.en}</p>

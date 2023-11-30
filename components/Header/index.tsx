@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "./Header.module.css";
 import { ChangeEvent, FunctionComponent, PropsWithChildren, SyntheticEvent, useContext, useState } from "react";
 import Image from "next/image";
@@ -42,14 +43,19 @@ const Header: FunctionComponent<Props> = () => {
                     <option value="en">EN</option>
                 </select>
             </div>
-            <Image 
+            <img src="/images/navigation.svg" 
+                alt="Navigation Logo" 
+                className={styles.navLogo}
+                onClick={toggleDisplayNav}
+            />
+            {/* <Image 
                 src="./images/navigation.svg"
                 alt="Navigation Logo"
                 height={30}
                 width={30}
                 className={styles.navLogo}
                 onClick={toggleDisplayNav}
-            />
+            /> */}
             {displayNavSmallScreen && <div className={styles.navSmallScreenContainer} onClick={toggleDisplayNav}>
                 <div onClick={(e:SyntheticEvent<HTMLDivElement>) => {e.stopPropagation()}} className={styles.navSmallScreen}>
                     <Navigation toggleDisplayNav={toggleDisplayNav}/>

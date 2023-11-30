@@ -41,6 +41,31 @@ footer p {
     color: var(--textHover);
 }
 
+main .slick-slider {
+    height: 33.3333%;
+    padding: 31px 0;
+}
+main .slick-slider div {
+    height: 100%;
+}
+
+.slick-slider .slick-prev {
+    background-color: #000;
+    z-index: 50;
+    opacity: .02;
+    left: 0;
+    height: 100%;
+    width: 50px;
+}
+
+.slick-slider .slick-next {
+    background-color: #000;
+    opacity: .02;
+    right: 0px;
+    height: 100%;
+    width: 50px;
+}
+
 .errorPage {
     position: relative;
     top: var(--headerHight);
@@ -83,6 +108,9 @@ footer p {
     .errorPage h1 {
         font-size: 2rem;
     }
+    main .slick-slider {
+        height: 50vw;
+    }
 }
 
 @media (max-width: 550px) {
@@ -102,6 +130,11 @@ footer p {
     .errorPage h1 {
         font-size: 1.7rem;
     }
+    main .slick-slider {
+        height: 100vw;
+        padding: 31px 0;
+    }
+
 }
 
 @media (max-width: 390px) {

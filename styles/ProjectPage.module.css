@@ -27,21 +27,11 @@
     margin-bottom: 20px;
 }
 
-.imgs {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    white-space: nowrap;
-    overflow-x: scroll;
-    padding: 10px;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-.imgs img {
-    box-shadow: 5px 5px 10px grey;
-    border-radius: 10px;
+.imgProject {
+    height: 100%;
 }
 .descriptionDiv, .technologiesDiv {
+    margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -90,10 +80,6 @@
         width: 100%;
         justify-content: center;
     }
-    .imgs img {
-        width: 275px;
-        height: 275px;
-    }
 }
 
 @media (max-width: 700px){
@@ -108,10 +94,6 @@
     }
     .descriptionDiv p, .technologiesDiv p {
         font-size: .9rem;
-    }
-    .imgs img {
-        width: 250px;
-        height: 250px;
     }
     .viewContent a{
         font-size: .9rem;
@@ -146,10 +128,6 @@
     .descriptionDiv p, .technologiesDiv p {
         font-size: .8rem;
     }
-    .imgs img {
-        width: 210px;
-        height: 210px;
-    }
     .viewContent a{
         font-size: .8rem;
         height: 38px;
@@ -165,9 +143,5 @@
     }
     .descriptionDiv, .technologiesDiv {
         margin-bottom: 5px;
-    }
-    .imgs img {
-        width: 190px;
-        height: 190px;
     }
 }
