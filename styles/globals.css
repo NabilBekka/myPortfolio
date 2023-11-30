@@ -41,9 +41,19 @@ footer p {
     color: var(--textHover);
 }
 
+.sliderContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 main .slick-slider {
     height: 33.3333%;
+    max-height: 300px;
+    max-width: 900px;
     padding: 31px 0;
+    margin-bottom: 20px;
 }
 main .slick-slider div {
     height: 100%;
@@ -110,6 +120,7 @@ main .slick-slider div {
     }
     main .slick-slider {
         height: 50vw;
+        max-height: none;
     }
 }
 
