@@ -13,7 +13,6 @@
 
 .project:hover {
     transform: scale(1.01);
-    cursor: pointer;
 }
 
 .h3 {
@@ -24,6 +23,24 @@
 .p {
     font-size: .8rem;
     text-align: center;
+}
+
+.btn {
+    background-color: var(--textHover);
+    color: #fff;
+    border: solid 1px var(--textHover);
+    border-radius: 3px;
+    width: 150px;
+    height: 35px;
+    line-height: 35px;
+    font-size: .8rem;
+    transition: .5s;
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--background);
+    color: var(--textHover);
+    cursor: pointer;
 }
 
 @media (max-width: 970px) {
@@ -51,6 +68,13 @@
     .p {
         font-size: .6rem;
     }
+    .btn {
+        border-radius: 2px;
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        font-size: .6rem;
+    }
 }
 
 @media (max-width: 350px) {
@@ -70,6 +94,13 @@
     }
 
     .p {
+        font-size: .5rem;
+    }
+    .btn {
+        border-radius: 1.8px;
+        width: 100px;
+        height: 26px;
+        line-height: 26px;
         font-size: .5rem;
     }
 }

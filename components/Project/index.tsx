@@ -23,7 +23,7 @@ const Project: FunctionComponent<Props> = ({project, projectDisplay = 0, number 
     }
 
     return (
-      <div className={`${styles.project} ${condition && styles.display}`} onClick={redirect}>
+      <div className={`${styles.project} ${condition && styles.display}`}>
           <h3 className={styles.h3}>{name}</h3>
           <Image 
             src={imgUrl[0]}
@@ -33,6 +33,7 @@ const Project: FunctionComponent<Props> = ({project, projectDisplay = 0, number 
             className={styles.img}
           />
           <p className={styles.p}>{language === "fr" ? abstract.fr : abstract.en}</p>
+          <button className={styles.btn} onClick={redirect}>{language==="fr" ? "Plus d'infos":"More info"}</button>
       </div>
     )
 }
