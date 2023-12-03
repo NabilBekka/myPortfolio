@@ -49,11 +49,13 @@
     margin-left: 20px;
     background: none;
     border: none;
+    outline: none;
 }
 
 .select:hover {
     cursor: pointer;
     outline: none;
+    color: var(--textHover);
 }
 
 .navLogo {
@@ -110,7 +112,7 @@
     }
 
     .select {
-        top: 15px;
+        top: 12px;
         font-size: 0.8rem;
     }
 

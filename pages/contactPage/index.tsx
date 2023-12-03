@@ -1,36 +1,12 @@
 import { LanguageContext } from "@/lib/contexts/languageContext";
 import Head from "next/head";
-import { SyntheticEvent, useContext, useRef, useState } from "react";
+import { useContext } from "react";
 import styles from "./contactPage.module.css";
 import { useForm, ValidationError } from '@formspree/react';
-
-type FormContact = {
-    name: string;
-    email: string;
-    message: string
-}
 
 export default function ContactPage () {
     const {language} = useContext(LanguageContext);
     const [state, handleSubmit] = useForm("xyyqqaka");
-    // const [formData, setFormData] = useState<FormContact>();
-    // const nameRef = useRef<HTMLInputElement>(null);
-    // const emailRef = useRef<HTMLInputElement>(null);
-    // const messageRef = useRef<HTMLTextAreaElement>(null);
-
-    // const handleSubmit = (e: SyntheticEvent): void => {
-    //     e.preventDefault();
-    //     if (nameRef.current?.value && emailRef.current?.value && messageRef.current?.value){
-    //         setFormData({
-    //             name: nameRef.current.value,
-    //             email: emailRef.current.value,
-    //             message: messageRef.current.value,
-    //         });
-    //         nameRef.current.value = "";
-    //         emailRef.current.value = "";
-    //         messageRef.current.value = "";
-    //     }
-    // }
 
     return <>
         <Head>

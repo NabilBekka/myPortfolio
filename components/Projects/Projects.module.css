@@ -15,12 +15,10 @@
 
 .scrollLeft {
     display: none;
-    margin-top: 150px;
 }
 
 .scrollRight {
     display: none;
-    margin-top: 150px;
 }
 
 .scrollLeft:hover , .scrollRight:hover {
@@ -50,12 +48,10 @@
 @media (max-width: 460px){
     .scrollLeft {
         width: 40px;
-        margin-top: 130px;
     }
     
     .scrollRight {
         width: 40px;
-        margin-top: 130px;
     }
 
     .whiteDiv {
@@ -66,12 +62,10 @@
 @media (max-width: 350px){
     .scrollLeft {
         width: 30px;
-        margin-top: 110px;
     }
     
     .scrollRight {
         width: 30px;
-        margin-top: 110px;
     }
 
     .whiteDiv {

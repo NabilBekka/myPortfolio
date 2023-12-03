@@ -23,7 +23,7 @@ const Footer: FunctionComponent = () => {
                     alt="Github logo"
                 /></a>
             </div>
-            <p>&copy;NabilBekka</p>
+            <p>Copyright &copy; Nabil Bekka</p>
         </footer>
     )
 }

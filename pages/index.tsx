@@ -81,6 +81,7 @@ export default function Home({frContent, enContent, technologies, projects}: Pro
             width={383}
             alt={language==='fr' ? 'Photo de profil' : 'Profil picture'}
             className={styles.img}
+            priority
           />
         </section>
         <aside className={styles.aside}>

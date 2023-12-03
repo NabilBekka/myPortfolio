@@ -48,14 +48,6 @@ const Header: FunctionComponent<Props> = () => {
                 className={styles.navLogo}
                 onClick={toggleDisplayNav}
             />
-            {/* <Image 
-                src="./images/navigation.svg"
-                alt="Navigation Logo"
-                height={30}
-                width={30}
-                className={styles.navLogo}
-                onClick={toggleDisplayNav}
-            /> */}
             {displayNavSmallScreen && <div className={styles.navSmallScreenContainer} onClick={toggleDisplayNav}>
                 <div onClick={(e:SyntheticEvent<HTMLDivElement>) => {e.stopPropagation()}} className={styles.navSmallScreen}>
                     <Navigation toggleDisplayNav={toggleDisplayNav}/>

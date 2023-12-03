@@ -6,7 +6,7 @@
         },
         {
             "name": "Next JS",
-            "urlLogo": "/images/technologies/nextjs.png"
+            "urlLogo": "/images/technologies/next-js.svg"
         },
         {
             "name": "JavaScript",
@@ -18,15 +18,15 @@
         },
         {
             "name": "Node JS",
-            "urlLogo": "/images/technologies/nodejs.jpg"
+            "urlLogo": "/images/technologies/node-js.svg"
         },
         {
             "name": "Express JS",
-            "urlLogo": "/images/technologies/expressjs.png"
+            "urlLogo": "/images/technologies/express-js.svg"
         },
         {
             "name": "Redux",
-            "urlLogo": "/images/technologies/redux.png"
+            "urlLogo": "/images/technologies/redux.svg"
         },
         {
             "name": "React Testing Library",
